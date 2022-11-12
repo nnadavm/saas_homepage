@@ -282,7 +282,7 @@ input {
     height: 24px;
     width: 24px;
     border-radius: 12px;
-    background: url(/content/Pikachu.webp) center center;
+    background: url(content/Pikachu.webp) center center;
     background-size: cover;
 }
 
@@ -290,7 +290,7 @@ input {
     height: 24px;
     width: 24px;
     border-radius: 12px;
-    background: url(/content/ash-ketchum.jpeg) center center;
+    background: url(content/ash-ketchum.jpeg) center center;
     background-size: cover;
 }
 
@@ -298,7 +298,7 @@ input {
     height: 24px;
     width: 24px;
     border-radius: 12px;
-    background: url(/content/bulbasaur.webp) center center;
+    background: url(content/bulbasaur.webp) center center;
     background-size: cover;
 }
 
@@ -405,12 +405,12 @@ input {
 }
 
 #img-deals-div {
-    background: url(/content/deals_graph.png) center center;
+    background: url(content/deals_graph.png) center center;
     background-repeat: no-repeat;
 }
 
 #img-tasks-div {
-    background: url(/content/tasks_graph.png) center center;
+    background: url(content/tasks_graph.png) center center;
     background-repeat: no-repeat;
 }
 
