@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Main layout--------------------------------------------------- */
+
+#sidebar {
+    width: 20%;
+    min-width: 220px;
+    height: 100vh;
+    box-shadow: 0px 4px 4px lightgray;
+    z-index: 0;
+}
+
+#main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#searchbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-content {
+    height: 100%;
+    background-color: #F5F6F8;
+    display: flex;
+    justify-content: center;
+}
+
+#grid-container {
+    width: 100%;
+    margin: 3%;
+    display: grid;
+    grid-template-areas: 
+    'tasks tasks tasks deals deals'
+    'tasks tasks tasks graph graph';
+    column-gap: 3%;
+    row-gap: 4%;
+}
+
+#left-column-container {
+    grid-area: tasks;
+    min-width: 375px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#deals-container {
+    grid-area: deals;
+    background-color: white;
+}
+
+#graph-container {
+    grid-area: graph;
+    background-color: white;
+}
+
+#divider {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 57px;
+    border-bottom: 1px solid #EBEFF2;
+}
+
+.divider2 {
+    width: 100%;
+    height: 1px;
+    background-color: #EBEFF2;
+}
+
+/* Side bar elements-------------------------------------------------------- */
+
+#title {
+    height: 60px;
+    font-family: 'Open Sans', sans-serif;
+    color: #109CF1;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 0 20px;
+}
+
+#user {
+    height: 46px;
+    width: 208px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#user-profile-image {
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    background: url(https://avatars.githubusercontent.com/u/109889382?s=400&u=c0a347d718de11ee544bec45feaa57074c0bc831&v=4) center center;
+    background-size: cover;
+}
+
+#user-name-text-style {
+    font-weight: 500;
+    font-size: 14px;
+    color: #192A3E;
+}
+
+#user-email-text-style {
+    font-weight: 500;
+    font-size: 11px;
+    color: #90A0B7;
+}
+
+#navbar, .settings-container {
+    margin: 20px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px;
+    font-size: 12px;
+    color: #334D6E;
+}
+
+#navbar .nav-item:first-child {
+    color: #109CF1;
+}
+
+.nav-item svg {
+    margin-right: 20px;
+}
+
+#toggle {
+    position: absolute;
+    bottom: 5px;
+}
+
+#toggle-text {
+    font-weight: 500;
+    font-size: 11px;
+    color: #90A0B7;
+}
+
+/* Search bar elements---------------------------------------------------- */
+
+#search-box {
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+
+}
+
+input {
+    color: #90A0B7;
+    border: none;
+    padding-left: 10px;
+    z-index: 0;
+}
+
+#bellSVG {
+    margin-right: 3%;
+}
+
+/* Left column grid elements----------------------------------------- */
+.select {
+    border: none;
+    font-size: 12px;
+    color: #109CF1;
+}
+
+#progress-bar-100 {
+    height: 4px;
+    background-color: #EBEFF2;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+#progress-bar-80 {
+    height: 4px;
+    width: 80%;
+    background-color: #2ED47A;
+    border-radius: 2px;
+}
+
+#calender-container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calender-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.day {
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    color: #334D6E;
+    margin-bottom: 5px;
+    opacity: 0.5;
+}
+
+.date {
+    font-size: 12px;
+    text-align: center;
+    color: #4C5862;
+}
+
+#circle-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #109CF2;
+}
+
+#circle-text {
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+
+.monday {
+    color: #109CF2;
+    opacity: 1;
+}
+
+.due-date-title {
+    font-size: 13px;
+    color: #4C5862;
+    opacity: 0.5;
+    padding: 0;
+    margin: 0;
+}
+
+.due-date {
+    font-size: 13px;
+    color: #4C5862;
+    padding: 0;
+    margin: 0;
+}
+
+#progress-title {
+    font-weight: 500;
+    font-size: 13px;
+    color: #334D6E;
+}
+
+.assignee-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+#profile-image {
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    background: url(/content/Pikachu.webp) center center;
+    background-size: cover;
+}
+
+#profile-image2 {
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    background: url(/content/ash-ketchum.jpeg) center center;
+    background-size: cover;
+}
+
+#profile-image3 {
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    background: url(/content/bulbasaur.webp) center center;
+    background-size: cover;
+}
+
+.completed {
+    background: #2ED47A;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    font-size: 11px;
+    width: 84px;
+    height: 22px;
+}
+
+#ended {
+    background: #F7685B;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    font-size: 11px;
+    width: 84px;
+    height: 22px;
+}
+
+#ended-button svg {
+    margin-right: 10px;
+}
+
+/* right column gird elements------------------------------------------------------ */
+
+#progress-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 33%;
+    margin: 0 5%;
+}
+
+#tasklist-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 5%;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+    margin-top: 20px;
+    padding: 0 3% 0 3%;
+}
+
+#show-more {
+    margin: 15px auto;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    color: #109CF1;
+}
+
+.shadow {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
+.graph {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 54px;
+    margin: 0 5%;
+}
+
+.container-title-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-style1 {
+    font-weight: 500;
+    font-size: 15px;
+    color: #192A3E;
+    padding: 0;
+    margin: 0;
+}
+
+.text-style2 {
+    font-size: 12px;
+    color: #6A707E;
+}
+
+.text-style3 {
+    font-size: 13px;
+    color: #707683;
+    padding-left: 10px;
+}
+
+#img-deals-div {
+    background: url(/content/deals_graph.png) center center;
+    background-repeat: no-repeat;
+}
+
+#img-tasks-div {
+    background: url(/content/tasks_graph.png) center center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 500px) {
+    #sidebar, #calender-container, #show-more, #divider {
+        display: none;
+    }
+
+    #grid-container {
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-areas: 
+        'tasks'
+        'deals'
+        'graph';
+        row-gap: 1%;
+    }
+
+    #left-column-container, #right-column-container, #deals-container, #graph-container {
+        box-shadow: none;
+    }
+
+    #img-deals-div {
+        width: 100%;
+        height: 300px;
+        background-size: 100%;
+    }
+
+    #img-tasks-div {
+        width: 100%;
+        height: 300px;
+        background-size: 100%;
+    }
+
+    #main-content {
+        background-color: white;
+    }
+
+    .task{
+        height: 150px;
+        flex: none;
+    }
+
+    #progress-container > p {
+        padding-bottom: 5px;
+    }
+    
+  }
+
+  @media (min-width: 501px) {
+    #main-container {
+        height: 100vh;
+    }
+
+    #img-deals-div {
+        height: 100%;
+        background-size: contain;
+    }
+
+    #img-tasks-div {
+        height: 100%;
+        background-size: contain;
+    }
+
+  }
