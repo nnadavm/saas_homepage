@@ -10,6 +10,11 @@ body {
     flex-wrap: nowrap;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Main layout--------------------------------------------------- */
 
 #sidebar {
@@ -44,7 +49,7 @@ body {
     width: 100%;
     margin: 3%;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     'tasks tasks tasks deals deals'
     'tasks tasks tasks graph graph';
     column-gap: 3%;
@@ -173,6 +178,11 @@ input {
 
 #bellSVG {
     margin-right: 3%;
+    z-index: 0;
+}
+
+#bellSVG:hover {
+    cursor: pointer;
 }
 
 /* Left column grid elements----------------------------------------- */
@@ -322,6 +332,10 @@ input {
     height: 22px;
 }
 
+.completed:hover, #ended:hover, a:hover {
+    opacity: 0.5;
+}
+
 #ended-button svg {
     margin-right: 10px;
 }
@@ -379,6 +393,10 @@ input {
     margin: 0 5%;
 }
 
+#container-title-progress {
+    margin: 0;
+}
+
 .container-title-left {
     display: flex;
     align-items: center;
@@ -422,7 +440,7 @@ input {
     #grid-container {
         margin-left: 0;
         margin-right: 0;
-        grid-template-areas: 
+        grid-template-areas:
         'tasks'
         'deals'
         'graph';
@@ -457,7 +475,7 @@ input {
     #progress-container > p {
         padding-bottom: 5px;
     }
-    
+
   }
 
   @media (min-width: 501px) {
